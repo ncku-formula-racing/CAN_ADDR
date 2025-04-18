@@ -36,6 +36,7 @@ typedef enum {
 #define CA_DAQ_FLOW_RATE_H 3
 #define CA_DAQ_FLOW_RATE_L 2
 #define CA_DAQ_FAN_PWM 1
+#define CA_DAQ_PUMP_PWM 0
 
 /* CAN data index for RGB Enable */
 #define CA_RGB_EN 7
