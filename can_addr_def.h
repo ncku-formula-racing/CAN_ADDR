@@ -2,8 +2,15 @@
 #define can_addr_def_h
 
 typedef enum {
+  CA_IMD_Request = 0x22,
+  CA_IMD_Response = 0x23,
   CA_FAULT_SIGNAL = 0x30,
+  CA_IMD_Info_General = 0x37,
+  CA_IMD_Info_IsolationDetail = 0x38,
+  CA_IMD_Info_Voltage = 0x39,
+  CA_IMD_Info_IT = 0x3A,
   CA_DASHBOARD_BTN = 0x50,
+  CA_DASHBOARD_INFO = 0x51,
   CA_BSPD_SIGNAL = 0x60,
   CA_DAQ_EN = 0x70,
   CA_DAQ_DATA = 0x71,
@@ -19,6 +26,11 @@ typedef enum {
 #define CA_U1_TRIG 7
 #define CA_U2_TRIG 6
 #define CA_U3_TRIG 5
+
+/* CAN data index for Dashboard Info */
+#define CA_U1_LED 7
+#define CA_U2_LED 6
+#define CA_U3_LED 5
 
 /* CAN data index for BSPD Signal */
 #define CA_APPS_FAULT 7
