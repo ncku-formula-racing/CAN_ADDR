@@ -33,9 +33,10 @@ typedef enum {
 #define CA_U3_LED 5
 
 /* CAN data index for BSPD Signal */
-#define CA_APPS_FAULT 7
-#define CA_BSE_FAULT 6
-#define CA_BOTH_FAULT 5
+#define CA_BOTH_FAULT 3
+#define CA_APPS_FAULT 2
+#define CA_BSER_FAULT 1
+#define CA_BSEL_FAULT 0
 
 /* CAN data index for DAQ Enable */
 #define CA_DAQ_EN 7
