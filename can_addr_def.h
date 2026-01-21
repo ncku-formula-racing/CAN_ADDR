@@ -18,19 +18,20 @@ typedef enum {
 } can_addr_def_e;
 
 /* CAN data index for Fault Signal */
-#define CA_BMS_FAULT_IDX 2
-#define CA_IMD_FAULT_IDX 1
 #define CA_BSPD_FAULT_IDX 0
+#define CA_IMD_FAULT_IDX 1
+#define CA_BMS_FAULT_IDX 2
+
 
 /* CAN data index for Dashboard Button */
-#define CA_U1_TRIG 7
-#define CA_U2_TRIG 6
-#define CA_U3_TRIG 5
+#define CA_U1_TRIG 0
+#define CA_U2_TRIG 1
+#define CA_U3_TRIG 2
 
 /* CAN data index for Dashboard Info */
-#define CA_U1_LED 7
-#define CA_U2_LED 6
-#define CA_U3_LED 5
+#define CA_U1_LED 0
+#define CA_U2_LED 1
+#define CA_U3_LED 2
 
 /* CAN data index for BSPD Signal */
 #define CA_BOTH_FAULT 3
