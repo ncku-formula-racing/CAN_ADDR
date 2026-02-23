@@ -21,6 +21,11 @@ typedef enum {
 #define CA_BSPD_FAULT_IDX 0
 #define CA_IMD_FAULT_IDX 1
 #define CA_BMS_FAULT_IDX 2
+/* CAN data index for BSPD Signal */
+#define CA_BOTH_FAULT 6
+#define CA_APPS_FAULT 5
+#define CA_BSER_FAULT 4
+#define CA_BSEL_FAULT 3
 
 
 /* CAN data index for Dashboard Button */
