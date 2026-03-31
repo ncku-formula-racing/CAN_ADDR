@@ -45,7 +45,7 @@ typedef enum {
 #define CA_BSEL_FAULT 0
 
 /* CAN data index for DAQ Enable */
-#define CA_DAQ_EN 7
+#define CA_DAQ_EN_IDX 7
 
 /* CAN data index for DAQ Data */
 #define CA_DAQ_PRE_TEMP 7
@@ -58,7 +58,7 @@ typedef enum {
 #define CA_DAQ_PUMP_PWM 0
 
 /* CAN data index for RGB Enable */
-#define CA_RGB_EN 7
+#define CA_RGB_EN_IDX 7
 #define CA_RGB_INTENSITY 6
 
 #endif
