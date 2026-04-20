@@ -2,6 +2,15 @@
 #define can_addr_def_h
 
 typedef enum {
+  CA_INV_LEFT_VOLTAGE = 0x10,
+  CA_INV_RIGHT_VOLTAGE = 0x11,
+  CA_INV_LEFT_DATA1 = 0x12,
+  CA_INV_LEFT_DATA2 = 0x13,
+  CA_INV_LEFT_DATA3 = 0x14,
+  CA_INV_RIGHT_DATA1 = 0x15,
+  CA_INV_RIGHT_DATA2 = 0x16,
+  CA_INV_RIGHT_DATA3 = 0x17,
+
   CA_IMD_Request = 0x22,
   CA_IMD_Response = 0x23,
   CA_FAULT_SIGNAL = 0x30,
@@ -9,9 +18,13 @@ typedef enum {
   CA_IMD_Info_IsolationDetail = 0x38,
   CA_IMD_Info_Voltage = 0x39,
   CA_IMD_Info_IT = 0x3A,
+
+  CA_BMS_DATA1 = 0x40,
+  CA_BMS_DATA2 = 0x41,
+  CA_LVBMS_DATA1 = 0x45,
+  CA_LVBMS_DATA2 = 0x46,
+  
   CA_DASHBOARD_BTN = 0x50,
-  CA_DASHBOARD_INFO = 0x51,
-  CA_BSPD_SIGNAL = 0x60,
   CA_DAQ_EN = 0x70,
   CA_DAQ_DATA = 0x71,
   CA_RGB_EN = 0x90,
@@ -38,11 +51,6 @@ typedef enum {
 #define CA_U2_LED 1
 #define CA_U3_LED 2
 
-/* CAN data index for BSPD Signal */
-#define CA_BOTH_FAULT 3
-#define CA_APPS_FAULT 2
-#define CA_BSER_FAULT 1
-#define CA_BSEL_FAULT 0
 
 /* CAN data index for DAQ Enable */
 #define CA_DAQ_EN_IDX 7
