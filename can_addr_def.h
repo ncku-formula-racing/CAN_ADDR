@@ -31,7 +31,7 @@ typedef enum {
   CA_IMU_Err = 0x01,
   CA_IMU_SampleTime = 0x05,
   CA_IMU_GroupCnt = 0x06,
-  CA_IMU_Status = 0x11,
+  CA_IMU_Status = 0x02,
   CA_IMU_Quat = 0x21,
   CA_IMU_dv = 0x31,
   CA_IMU_RateTurn = 0x32,
