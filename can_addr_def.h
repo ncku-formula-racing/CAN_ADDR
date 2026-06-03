@@ -11,6 +11,8 @@ typedef enum {
   CA_INV_RIGHT_DATA2 = 0x16,
   CA_INV_RIGHT_DATA3 = 0x17,
 
+  CA_APPS = 0x18,
+
   CA_IMD_Request = 0x22,
   CA_IMD_Response = 0x23,
   CA_FAULT_SIGNAL = 0x30,
@@ -87,6 +89,12 @@ typedef enum {
 #define CA_IMU_FreeACC_y_HIGH_IDX 3
 #define CA_IMU_FreeACC_z_LOW_IDX 4
 #define CA_IMU_FreeACC_z_HIGH_IDX 5
+
+/* CAN data index for ADC sensors @0x18 (each int16 LE) */
+#define CA_APPS_L_IDX 0
+#define CA_APPS_R_IDX 2
+#define CA_BPPS_IDX 4
+#define CA_STEER_IDX 6
 
 /* CAN data index for Fault Signal */
 #define CA_BSPD_FAULT_IDX 0
