@@ -21,8 +21,9 @@ typedef enum {
   CA_IMD_Info_Voltage = 0x39,
   CA_IMD_Info_IT = 0x3A,
 
-  CA_BMS_DATA1 = 0x40,
-  CA_BMS_DATA2 = 0x41,
+  CA_BMS_VoltageTemp = 0x40,
+  CA_BMS_BMS_Summary = 0x41,
+
   CA_LVBMS_DATA1 = 0x45,
   CA_LVBMS_DATA2 = 0x46,
 
