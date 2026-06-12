@@ -30,6 +30,8 @@ typedef enum {
   CA_DASHBOARD_BTN = 0x50,
   CA_DAQ_EN = 0x70,
   CA_DAQ_DATA = 0x71,
+  CA_Fusion_Vel = 0x77,
+  CA_Fusion_Omega = 0x78,
   CA_GPS_Data = 0x87,
   CA_RGB_EN = 0x90,
   CA_IMU_Err = 0x01,
@@ -44,7 +46,7 @@ typedef enum {
   CA_IMU_FreeAcc = 0x35,
 } can_addr_def_e;
 
-/* CAN data index for IMU info */
+/* CAN data index for IMU info (big-endian) */
 #define CA_IMU_Err_IDX 0
 #define CA_IMU_SampleTime_IDX 0 // big-endian uint32 at offset 0..3
 #define CA_IMU_GroupCnt_IDX 0
@@ -91,12 +93,19 @@ typedef enum {
 #define CA_IMU_FreeACC_z_HIGH_IDX 4
 #define CA_IMU_FreeACC_z_LOW_IDX 5
 
-/* CAN data index for GPS data @0x87 (LE; sent only on valid fix) */
+/* CAN data index for fusion output (little-endian) */
+#define CA_FUSION_VX_IDX 0 /* int16, body-frame forward velocity, cm/s */
+#define CA_FUSION_VY_IDX 2 /* int16, body-frame right velocity, cm/s */
+#define CA_FUSION_WX_IDX 0 /* int16, roll rate, mrad/s */
+#define CA_FUSION_WY_IDX 2 /* int16, pitch rate, mrad/s */
+#define CA_FUSION_WZ_IDX 4 /* int16, yaw rate, mrad/s */
+
+/* CAN data index for GPS data (little-endian) */
 #define CA_GPS_UTC_IDX 0 /* uint32, hhmmss */
 #define CA_GPS_SOG_IDX 4 /* uint16, speed over ground, cm/s */
 #define CA_GPS_COG_IDX 6 /* uint16, course over ground, 0.01 deg */
 
-/* CAN data index for ADC sensors @0x18 (each int16 LE) */
+/* CAN data index for ADC sensors */
 #define CA_APPS_L_IDX 0
 #define CA_APPS_R_IDX 2
 #define CA_BPPS_IDX 4
