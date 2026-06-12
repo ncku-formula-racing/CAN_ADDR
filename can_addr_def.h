@@ -30,6 +30,7 @@ typedef enum {
   CA_DASHBOARD_BTN = 0x50,
   CA_DAQ_EN = 0x70,
   CA_DAQ_DATA = 0x71,
+  CA_GPS_Data = 0x87,
   CA_RGB_EN = 0x90,
   CA_IMU_Err = 0x01,
   CA_IMU_SampleTime = 0x05,
@@ -89,6 +90,11 @@ typedef enum {
 #define CA_IMU_FreeACC_y_LOW_IDX 3
 #define CA_IMU_FreeACC_z_HIGH_IDX 4
 #define CA_IMU_FreeACC_z_LOW_IDX 5
+
+/* CAN data index for GPS data @0x87 (LE; sent only on valid fix) */
+#define CA_GPS_UTC_IDX 0 /* uint32, hhmmss */
+#define CA_GPS_SOG_IDX 4 /* uint16, speed over ground, cm/s */
+#define CA_GPS_COG_IDX 6 /* uint16, course over ground, 0.01 deg */
 
 /* CAN data index for ADC sensors @0x18 (each int16 LE) */
 #define CA_APPS_L_IDX 0
