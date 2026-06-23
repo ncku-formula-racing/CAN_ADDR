@@ -12,6 +12,7 @@ typedef enum {
   CA_INV_RIGHT_DATA3 = 0x17,
 
   CA_APPS = 0x18,
+  CA_HV_EN = 0x19,
 
   CA_IMD_Request = 0x22,
   CA_IMD_Response = 0x23,
