@@ -27,6 +27,7 @@ typedef enum {
 
   CA_LVBMS_DATA1 = 0x45,
   CA_LVBMS_DATA2 = 0x46,
+  CA_LVBMS_DATA3 = 0x47,
 
   CA_DASHBOARD_BTN = 0x50,
   CA_DAQ_EN = 0x70,
@@ -46,6 +47,8 @@ typedef enum {
   CA_IMU_ACC = 0x34,
   CA_IMU_FreeAcc = 0x35,
 } can_addr_def_e;
+
+#ifndef CA_HV_EN_IDX 0
 
 /* CAN data index for IMU info (big-endian) */
 #define CA_IMU_Err_IDX 0
