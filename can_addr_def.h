@@ -49,6 +49,7 @@ typedef enum {
 } can_addr_def_e;
 
 #define CA_HV_EN_IDX 0
+#define CA_RTD_EN_IDX 1
 
 /* CAN data index for IMU info (big-endian) */
 #define CA_IMU_Err_IDX 0
